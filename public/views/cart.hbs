@@ -1,0 +1,35 @@
+{{>navbar}}
+{{>cartAlerts}}
+{{#if cart.length }}
+{{#each cart}}
+<div>
+    <form action="/content/cart/deleteProd/{{_id}}" method="post">
+        <div class="card" style="width: 18rem;">
+            <img src="{{img}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{title}}</h5>
+                <p class="card-text">{{description}}</p>
+                <button type="submit" class="btnRemoveProd btn btn-danger">delete</button>
+                <p class="card-text">Cantidad: {{quantity}}</p>
+                <p class="card-text">${{price}}</p>
+            </div>
+        </div>
+    </form>
+</div>
+{{/each}}
+<div>
+    <a href="/content/cart/purchased">
+        <button class="btn btn-success" type="submit" id="buyCart">Comprar</button>
+    </a>
+</div>
+<div>
+    <a href="/content/cart/empty">
+        <button class="btn btn-danger" type="submit" id="emptyCart">Vaciar carrito</button>
+    </a>
+</div>
+{{else}}
+<h1 class="text-danger">Aun no hay productos</h1>
+<a href="/content/home">
+    <button class="btn btn-warning">Volver</button>
+</a>
+{{/if}}

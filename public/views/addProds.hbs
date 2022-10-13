@@ -1,0 +1,43 @@
+{{>navbar}}
+{{>adminAlert}}
+<h1>Ingrese el nuevo producto</h1>
+<form id="productsForm" action="/admin/addProds" method="post">
+    <div class="form-group container">
+        <label for="title"><b>Nombre del producto</b></label>
+        <input type="text" class="form-control container" name="title" placeholder="ej:Queso" required>
+    </div>
+    <div class="form-group container">
+        <label for="description"><b>Descripción</b></label>
+        <input type="text" class="form-control container" name="description" placeholder="ej:Queso roquefort 1kg" required>
+    </div>
+    <div class="form-group container">
+        <label for="price"><b>Precio del producto</b></label>
+        <input type="number" class="form-control container" name="price" placeholder="ej:$1234" required>
+    </div>
+    <div class="form-group container">
+        <label for="img"><b>Foto del producto</b></label>
+        <input type="url" class="form-control container" name="img" placeholder="Url de la imagen" required>
+    </div>
+    <div class="form-group container">
+        <label for="stock"><b>Stock</b></label>
+        <input type="text" class="form-control container" name="stock" placeholder="ej:5" required>
+    </div>
+    <div class="text-center">
+        <input type="submit" class="btn btn-succes mt-3 mb-5 btn-secondary"></button>
+    </div>
+</form>
+{{#if prod}}
+    <h2>Producto agregado:</h2>
+    <div>
+      <div class="card" style="width: 18rem;">
+        <img src="{{prod.img}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{prod.title}}</h5>
+          <p class="card-text">{{prod.description}}</p>
+          <p class="card-text">${{prod.price}}</p>
+        </div>
+      </div>
+    </div>
+{{/if}}
+<div>
+<script src="../clients/addProdsClient.js"></script> 

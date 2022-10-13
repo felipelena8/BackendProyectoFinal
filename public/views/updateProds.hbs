@@ -1,0 +1,40 @@
+{{>navbar}}
+{{>adminAlert}}
+<h2 class="fw-bold">{{updateTitle}}</h2>
+<form id="productsForm" action="/admin/updateProd/{{idProd}}" method="post">
+    <div class="form-group container">
+        <label for="title"><b>Nombre del producto</b></label>
+        <input type="text" class="form-control container" name="title" value="{{currentProd.title}}">
+    </div>
+    <div class="form-group container">
+        <label for="description"><b>Descripción</b></label>
+        <input type="text" class="form-control container" name="description" value="{{currentProd.description}}">
+    </div>
+    <div class="form-group container">
+        <label for="price"><b>Precio del producto</b></label>
+        <input type="number" class="form-control container" name="price" value="{{currentProd.price}}">
+    </div>
+    <div class="form-group container">
+        <label for="img"><b>Foto del producto</b></label>
+        <input type="url" class="form-control container" name="img" value="{{currentProd.img}}">
+    </div>
+    <div class="form-group container">
+        <label for="stock"><b>Stock</b></label>
+        <input type="text" class="form-control container" name="stock" value="{{currentProd.stock}}" required>
+    </div>
+    <div class="text-center">
+        <input type="submit" class="btn btn-succes mt-3 mb-5 btn-secondary"></button>
+    </div>
+</form>
+    <h2>Producto actual:</h2>
+    <div>
+      <div class="card" style="width: 18rem;">
+        <img src="{{currentProd.img}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{currentProd.title}}</h5>
+          <p class="card-text">{{currentProd.description}}</p>
+          <p class="card-text">${{currentProd.price}}</p>
+        </div>
+      </div>
+    </div>
+<div>

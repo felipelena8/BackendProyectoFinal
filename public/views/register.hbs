@@ -1,0 +1,59 @@
+{{#each errors}}
+	<div role='alert' class='alert alert-danger alert-dismissible fade show'>
+		<strong>{{text}}</strong>
+		<button type='button' class='close btn' data-bs-dismiss='alert' aria-label='Close'>
+			<span aria-hidden='true'>&times;</span>
+		</button>
+	</div>
+{{/each}}
+{{>registerAlert}}
+<form action="/user/register" method="post" class="d-flex flex-column align-items-center" onsubmit="process(event)">
+    <div class="text-center d-flex flex-column justify-content-center w-25 p-3 align-items-center">
+        <label for="avatar">Avatar</label>
+        <input type="url" name="avatar" id="avatar" placeholder="Url de la imagen">
+    </div>
+    <div class="text-center d-flex flex-column justify-content-center w-25 p-3 align-items-center">
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="abcd@abc.com" required>
+    </div>
+    <div class="text-center d-flex flex-column justify-content-center w-25 p-3 align-items-center">
+        <label for="direction">Dirección</label>
+        <input type="text" name="direction" required>
+    </div>
+    <div class="text-center d-flex flex-column justify-content-center w-25 p-3 align-items-center">
+        <label for="username">Nombre</label>
+        <input type="text" name="username" placeholder="Juan" required />
+    </div>
+    <div class="text-center d-flex flex-column justify-content-center w-25 p-3 align-items-center">
+        <label for="lastname">Apellido</label>
+        <input type="text" name="lastname" placeholder="Perez" required>
+    </div>
+    <div class="text-center d-flex flex-column justify-content-center w-25 p-3 align-items-center">
+        <label for="age">Edad</label>
+        <input type="number" name="age" placeholder="19" required>
+    </div>
+    <div class="text-center d-flex flex-column justify-content-center w-25 p-3 align-items-center">
+        <label for="full_phone">Telefono</label>
+        <input id="phone" type="tel" />
+    </div>
+    <div class="text-center d-flex flex-column justify-content-center w-25 p-3 align-items-center">
+        <label for="password">Contraseña</label>
+        <input type="password" name="password" required />
+    </div>
+    <div class="text-center d-flex flex-column justify-content-center w-25 p-3 align-items-center">
+        <label for="confirmPsw">Confirmar contraseña</label>
+        <input type="password" name="confirmPsw" required />
+    </div>
+    <div class="text-center">
+        <button type="submit" class="btn btn-success mt-3 mb-5 ">Registrarse
+        </button>
+        <a href="/user/login">
+            <button type="button" class="btn mt-3 mb-5 btn-secondary">Ingresar
+            </button>
+        </a>
+    </div>
+    </div>
+</form>
+<div class="alert alert-info" style="display: none"></div>
+<div class="alert alert-error" style="display: none"></div>
+<script src="../clients/registerClient.js"></script>

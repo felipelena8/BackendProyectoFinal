@@ -1,0 +1,16 @@
+error: usuario no encontrado
+error: User validation failed: avatar: Path `avatar` is required. {"_message":"User validation failed","errors":{"avatar":{"kind":"required","message":"Path `avatar` is required.","name":"ValidatorError","path":"avatar","properties":{"message":"Path `avatar` is required.","path":"avatar","type":"required","value":""},"value":""}}}
+error: User validation failed: avatar: Path `avatar` is required. {"_message":"User validation failed","errors":{"avatar":{"kind":"required","message":"Path `avatar` is required.","name":"ValidatorError","path":"avatar","properties":{"message":"Path `avatar` is required.","path":"avatar","type":"required","value":""},"value":""}}}
+error: User validation failed: avatar: Path `avatar` is required. {"_message":"User validation failed","errors":{"avatar":{"kind":"required","message":"Path `avatar` is required.","name":"ValidatorError","path":"avatar","properties":{"message":"Path `avatar` is required.","path":"avatar","type":"required","value":""},"value":""}}}
+error: User validation failed: avatar: Path `avatar` is required. {"_message":"User validation failed","errors":{"avatar":{"kind":"required","message":"Path `avatar` is required.","name":"ValidatorError","path":"avatar","properties":{"message":"Path `avatar` is required.","path":"avatar","type":"required","value":""},"value":""}}}
+error: E11000 duplicate key error collection: test.users index: email_1 dup key: { email: "felipelena8@gmail.com" } {"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"felipelena8@gmail.com"}}
+error: E11000 duplicate key error collection: test.users index: phone_1 dup key: { phone: 541167081366.0 } {"code":11000,"index":0,"keyPattern":{"phone":1},"keyValue":{"phone":541167081366}}
+error: usuario no encontrado
+error: usuario no encontrado
+error: usuario no encontrado
+error: usuario no encontrado
+error: usuario no encontrado
+error: usuario no encontrado
+error: usuario no encontrado
+error: usuario no encontrado
+error: usuario no encontrado

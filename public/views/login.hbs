@@ -1,0 +1,25 @@
+{{#if error}}
+	<div>
+		<h1 class="danger"> {{error}} </h1>
+	</div>
+{{/if}}
+{{>registerAlert}}
+<div>
+	<form action="/user/login" method="post" class="loginForm d-flex flex-column align-items-center">
+		<div class="text-center d-flex flex-column justify-content-center w-25 p-3 align-items-center">
+			<label for="user" class="form-label">Nombre de usuario</label>
+			<input type="text" class="form-control" name="user" required />
+		</div>
+		<div class="text-center d-flex flex-column justify-content-center w-25 p-3 align-items-center">
+			<label for="password" class="form-label">Contraseña</label>
+			<input type="password" class="form-control" name="password" required />
+		</div>
+		<div class="text-center mb-3">
+			<button type="submit" class="btn btn-success mt-3 mb-5">Ingresar
+			</button>
+			<a href="/user/register">
+				<button type="button" class="btn btn-secondary mt-3 mb-5">Registrarse</button>
+			</a>
+		</div>
+	</form>
+</div>

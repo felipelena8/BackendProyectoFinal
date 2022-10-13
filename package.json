@@ -1,0 +1,50 @@
+{
+  "type": "module",
+  "name": "HerokuServer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "express.js",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.5",
+    "artillery": "^2.0.0-16",
+    "axios": "^0.27.2",
+    "bcrypt": "^5.0.1",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^4.6.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.14.2",
+    "handlebars": "^4.7.7",
+    "mongoose": "^6.2.9",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.7.5",
+    "nodemon": "^2.0.15",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
+    "socket.io": "^4.4.1",
+    "twilio": "^3.77.1",
+    "winston": "^3.7.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.0",
+    "@babel/node": "^7.17.10",
+    "@babel/preset-env": "^7.16.11",
+    "@faker-js/faker": "^6.1.1",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "supertest": "^6.2.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/express.js --ignore /public",
+    "heroku-prebuild": "export NPM_CONFIG_PRODUCTION=false; export NODE_ENV=; NPM_CONFIG_PRODUCTION=false NODE_ENV=development npm install --only=dev --dev",
+    "heroku-postbuild": "export NPM_CONFIG_PRODUCTION=true; export NODE_ENV=production;"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

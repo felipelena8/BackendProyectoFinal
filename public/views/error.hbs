@@ -1,0 +1,13 @@
+<div class="bg-danger vw-100 vh-100 d-flex flex-column justify-content-center align-items-center">
+	{{#if notAdmin}}
+		<h1 class="text-white">{{notAdmin}}</h1>
+		<a href="/content/home">
+			<button type="submit" class="btn btn-warning">Volver</button>
+		</a>
+	{{else}}
+		<h1 class="text-white">El usuario o contraseña no existen o son erroneos.</h1>
+		<a href="/user/login">
+			<button type="submit" class="btn btn-warning">Volver</button>
+		</a>
+	{{/if}}
+</div>
